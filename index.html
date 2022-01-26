@@ -2,11 +2,65 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Девайс</title>
+    <title>Интернет-магазин Девайс</title>
   </head>
   <body>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
+    <header class="page-header">
+      <nav class="main-nav">
+        <a class="logo">
+          <img class="logo-img" src="" alt="Логотип магазина Девайс">
+        </a>
+
+        <ul class="user-nav-list">
+          <li class="user-nav-item">
+            <form action="https://echo.htmlacademy.ru/" class="form-search" method="get">
+              <label for="search">Поиск по сайту</label>
+              <input class="search" id="search" type="text" name="search" placeholder="Текст поиска">
+              <button class="search-button" type="submit">Найти</button>
+            </form>
+          </li>
+          <li class="user-nav-item">
+            <ul class="registration-list">
+              <li class="registration-item">
+                <a class="user-nav-link" href="#">Войти</a>
+              </li>
+              <li class="registration-item">
+                <a class="user-nav-link" href="#">Коля Петухов</a>
+              </li>
+              <li class="registration-item">
+                <a class="user-nav-link" href="#">Выйти</a>
+              </li>
+            </ul>
+          </li>
+          <li class="user-nav-item">
+            <a class="user-nav-link" href="#">Сравнить</a>
+          </li>
+          <li class="user-nav-item">
+            <a class="user-nav-link" href="#">Корзина</a>
+          </li>
+        </ul>
+
+        <ul class="site-nav-list">
+          <li class="site-nav-item">
+            <a class="site-nav-link" href="catalog.html">Каталог</a>
+          </li>
+          <li class="site-nav-item">
+            <ul class="services-list">
+              <li class="services-item">
+                <a class="services-link" href="#">Доставка</a>
+              </li>
+              <li class="services-item">
+                <a class="services-link" href="#">Гарантия</a>
+              </li>
+              <li class="services-item">
+                <a class="services-link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
   </body>
 </html>
