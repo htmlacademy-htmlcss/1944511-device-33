@@ -15,7 +15,7 @@
         <ul class="user-nav-list">
           <li class="user-nav-item">
             <form action="https://echo.htmlacademy.ru/" class="form-search" method="get">
-              <label for="search">Поиск по сайту</label>
+              <label class="visually-hidden" for="search">Поиск по сайту</label>
               <input class="search" id="search" type="text" name="search" placeholder="Текст поиска">
               <button class="search-button" type="submit">Найти</button>
             </form>
@@ -26,10 +26,10 @@
                 <a class="user-nav-link" href="#">Войти</a>
               </li>
               <li class="registration-item">
-                <a class="user-nav-link" href="#">Коля Петухов</a>
+                <a class="user-nav-link visually-hidden" href="#">Коля Петухов</a>
               </li>
               <li class="registration-item">
-                <a class="user-nav-link" href="#">Выйти</a>
+                <a class="user-nav-link visually-hidden" href="#">Выйти</a>
               </li>
             </ul>
           </li>
@@ -61,6 +61,68 @@
         </ul>
       </nav>
     </header>
+
+    <main class="main">
+      <h1 class="visually-hidden">Интернет-магазин "Девайс"</h1>
+
+      <section class="slider">
+        <h2 class="visually-hidden">Популярные товары</h2>
+        <ul class="slider-list">
+          <li class="slider-item">
+            <article class="slider-article">
+              <h3 class="slider-article-title visually-hidden">Квадрокоптер</h3>
+              <img class="slider-img" src="" alt="Квадрокоптер с лазером">
+              <p class="slider-article-slogan">Порхает как бабочка,
+                жалит как пчела!</p>
+              <p class="slider-article-text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
+              </p>
+              <a class="link slider-link" href="#"></a>
+              <dl class="slider-params">
+                <dt class="slider-params-title">Дальность полета</dt>
+                <dd class="slider-params-value">800 м</dd>
+                <dt class="slider-params-title">Радиус поражения</dt>
+                <dd class="slider-params-value">50 м</dd>
+              </dl>
+            </article>
+            <p class="slider-number">01</p>
+          </li>
+        </ul>
+
+        <div class="slider-buttons">
+          <button class="slider-button slider-prev" type="button">
+            <span class="visually-hidden">Предыдущее фото</span>
+          </button>
+          <button class="slider-button slider-next" type="button">
+            <span class="visually-hidden">Следующее фото</span>
+          </button>
+        </div>
+
+        <ol class="slider-pagination">
+          <li class="slider-pagination-item">
+            <button class="slider-pagination-button slider-pagination-button-current" type="button">
+              <span class="visually-hidden">1 фото</span>
+            </button>
+          </li>
+          <li class="slider-pagination-item">
+            <button class="slider-pagination-button" type="button">
+              <span class="visually-hidden">2 фото</span>
+            </button>
+          </li>
+          <li class="slider-pagination-item">
+            <button class="slider-pagination-button" type="button">
+              <span class="visually-hidden">3 фото</span>
+            </button>
+          </li>
+        </ol>
+      </section>
+
+    </main>
+
+    <footer class="page-footer">
+
+
+
+    </footer>
 
   </body>
 </html>
