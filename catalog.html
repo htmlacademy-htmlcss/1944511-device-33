@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог товаров интернет-магазина Девайс</title>
+</head>
+<body>
+  <main class="main-catalog">
+    <h1 class="catalog-subtitle">Моноподы для селфи</h1>
+    <ul class="breadcrumbs-list">
+      <li class="breadcrumbs-item">
+        <a class="breadcrumbs-link" href="index.html">Главная</a>
+      </li>
+      <li class="breadcrumbs-item">
+        <a class="breadcrumbs-link" href="#">Каталог</a>
+      </li>
+      <li class="breadcrumbs-item">
+        <a class="breadcrumbs-link">Моноподы для селфи</a>
+      </li>
+    </ul>
+
+    <section class="catalog-filters">
+      <h2 class="catalog-filters-title">Фильтр:</h2>
+      <form class="filters" action="https://echo.htmlacademy.ru/" method="post">
+        <fieldset class="filters-area">
+          <legend class="filters-area-title">Стоимость</legend>
+        </fieldset>
+        <fieldset class="filters-area">
+          <legend class="filters-area-title">Цвет</legend>
+          <ul class="filters-area-list">
+            <li class="filters-area-item">
+              <input class="filters-color-field" type="checkbox" name="color-black" id="color-black" value="black" checked>
+              <label class="filters-color-label" for="color-black">Черный</label>
+            </li>
+            <li class="filters-area-item">
+              <input class="filters-color-field" type="checkbox" name="color-white" id="color-white" value="white" checked>
+              <label class="filters-color-label" for="color-white">Белый</label>
+            </li>
+            <li class="filters-area-item">
+              <input class="filters-color-field" type="checkbox" name="color-blue" id="color-blue" value="blue">
+              <label class="filters-color-label" for="color-blue">Синий</label>
+            </li>
+            <li class="filters-area-item">
+              <input class="filters-color-field" type="checkbox" name="color-red" id="color-red" value="red">
+              <label class="filters-color-label" for="color-red">Красный</label>
+            </li>
+            <li class="filters-area-item">
+              <input class="filters-color-field" type="checkbox" name="color-pink" id="color-pink" value="pink">
+              <label class="filters-color-label" for="color-pink">Розовый</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="filters-area">
+          <legend class="filters-area-title">Bluetooth</legend>
+          <ul class="filters-area-list">
+            <li class="filters-area-item">
+              <input class="filters-bluetooth-field" type="radio" name="bluetooth" id="bluetooth-yes" value="yes" checked>
+              <label class="filters-bluetooth-label" for="bluetooth-yes">Есть</label>
+            </li>
+            <li class="filters-area-item">
+              <input class="filters-bluetooth-field" type="radio" name="bluetooth" id="bluetooth-no" value="no">
+              <label class="filters-bluetooth-label" for="bluetooth-no">Нет</label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="filters-btn" type="submit">Показать</button>
+      </form>
+    </section>
+
+
+  </main>
+</body>
+</html>
