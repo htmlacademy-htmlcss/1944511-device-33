@@ -34,7 +34,42 @@ body {
   background-color: #ffffff;
 }
 
+/* common styles */
+.section-title {
+  font-family: Raleway, sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+  color: #000000;
+}
+
+.user-nav-link,
+.site-nav-link,
+.services-link,
+.sub-menu-link,
+.slider-link,
+.categories-link,
+.delivery-link,
+.companies-link,
+.about-link {
+  color: #000000;
+  text-decoration: none;
+}
+
+.site-nav-link,
+.services-link,
+.slider-link,
+.delivery-link,
+.about-link {
+  font-family: Raleway,sans-serif;
+  font-weight: 800;
+  line-height: 21px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
 /* Header */
+
 .page-header {
   color: #000000;
   background-color: #FFE17F;
@@ -54,30 +89,70 @@ body {
   opacity: 0.3;
 }
 
-.user-nav-link,
-.site-nav-link,
-.services-link,
-.sub-menu-link {
-  color: #000000;
-  text-decoration: none;
-}
-
 .sub-menu-link {
   font-size: 16px;
   line-height: 18px;
 }
 
-.site-nav-link,
-.services-link {
-  font-family: Raleway,sans-serif;
-  font-weight: 800;
-  line-height: 21px;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-}
-
 .link-opacity {
   opacity: 0.3;
 }
+
+/* Main */
+
+.slider-article-slogan {
+
+}
+
+.slider-params-title {
+  font-size: 16px;
+}
+
+.slider-params-value {
+  font-size: 36px;
+  color: #000000;
+}
+
+.slider-number {
+  font-weight: bold;
+  font-size: 180px;
+  color: #FFFFFF;
+}
+
+.categories-title {
+  font-family: Raleway, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+}
+
+.services {
+  background-color: #F0F0F0;
+}
+
+.services .active{
+  color: #FFE17F;
+}
+
+.services-desc-title {
+
+}
+
+.delivery-link {
+  font-size: 20px;
+  line-height: 23px;
+  background-color:#F0F0F0;
+}
+
+.companies-link {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  color: #000000;
+}
+
 
 
