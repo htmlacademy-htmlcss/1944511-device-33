@@ -51,7 +51,8 @@ body {
 .categories-link,
 .delivery-link,
 .companies-link,
-.about-link {
+.about-link,
+.contacts-link {
   color: #000000;
   text-decoration: none;
 }
@@ -60,7 +61,9 @@ body {
 .services-link,
 .slider-link,
 .delivery-link,
-.about-link {
+.about-link,
+.contacts-link,
+.subscribe-button {
   font-family: Raleway,sans-serif;
   font-weight: 800;
   line-height: 21px;
@@ -98,7 +101,7 @@ body {
   opacity: 0.3;
 }
 
-/* Main */
+/* Main-index */
 
 .slider-article-slogan {
 
@@ -153,6 +156,67 @@ body {
   letter-spacing: -0.02em;
   color: #000000;
 }
+
+.address-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.address-desc {
+  font-style: normal;
+}
+
+.address-tel {
+  color: #444444;
+}
+
+.subscribe {
+  background-color: #F0F0F0;
+}
+
+.email,
+.email::placeholder {
+  font-family: Rubik, sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  color: #000000;
+  background-color: #F0F0F0;
+}
+
+.email::placeholder {
+  opacity: 0.5;
+}
+
+.subscribe-button {
+  font-size: 18px;
+  background-color: #F0F0F0;
+}
+
+/* Footer */
+.page-footer {
+  background-color: #444444;
+}
+
+.footer-address {
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+}
+
+.page-footer .services-link {
+  color: #FFFFFF;
+}
+
+.footer-tel {
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+
+/* Main-catalog */
+
+
 
 
 
