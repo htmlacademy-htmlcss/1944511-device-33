@@ -22,6 +22,62 @@
   font-display: swap;
 }
 
-body{
+body {
+  margin: 0;
+  padding: 0;
   font-family: Rubik, sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #444444;
+  background-color: #ffffff;
 }
+
+/* Header */
+.page-header {
+  color: #000000;
+  background-color: #FFE17F;
+}
+
+.search,
+.search::placeholder,
+.search-button {
+  font-family: Rubik, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  background-color: #FFE17F;
+}
+
+.search::placeholder {
+  opacity: 0.3;
+}
+
+.user-nav-link,
+.site-nav-link,
+.services-link,
+.sub-menu-link {
+  color: #000000;
+  text-decoration: none;
+}
+
+.sub-menu-link {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.site-nav-link,
+.services-link {
+  font-family: Raleway,sans-serif;
+  font-weight: 800;
+  line-height: 21px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.link-opacity {
+  opacity: 0.3;
+}
+
+
