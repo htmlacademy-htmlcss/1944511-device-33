@@ -35,6 +35,7 @@ body {
 }
 
 /* common styles */
+
 .section-title {
   font-family: Raleway, sans-serif;
   font-weight: 800;
@@ -44,31 +45,23 @@ body {
 }
 
 .user-nav-link,
-.site-nav-link,
-.services-link,
 .sub-menu-link,
-.slider-link,
 .categories-link,
-.delivery-link,
 .companies-link,
-.about-link,
-.contacts-link {
+.breadcrumbs-link {
   color: #000000;
   text-decoration: none;
 }
 
-.site-nav-link,
-.services-link,
-.slider-link,
-.delivery-link,
-.about-link,
-.contacts-link,
-.subscribe-button {
+.btn {
   font-family: Raleway,sans-serif;
+  font-size: 18px;
   font-weight: 800;
   line-height: 21px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
+  color: #000000;
+  text-decoration: none;
 }
 
 /* Header */
@@ -216,7 +209,90 @@ body {
 
 /* Main-catalog */
 
+.breadcrumbs-link {
+  font-size: 16px;
+  line-height: 19px;
+}
 
+.catalog-subtitle {
+  font-family: Raleway;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #000000;
+}
 
+.filters {
+  color: #000000;
+  background-color: #F0F0F0;
+}
 
+.filters-area-title {
+  font-weight: bold;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+}
+
+.filters label {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.sort {
+  color: #000000;
+  background-color: #F0F0F0;
+}
+
+.sort-select,
+.sort-select option {
+  font-family: Rubik, sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  background-color: #F0F0F0;
+}
+
+.catalog-cards-link {
+  color: #000000;
+  text-decoration: none;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+}
+
+.card-price {
+  line-height: 21px;
+}
+
+.catalog-link-more {
+  font-family: Raleway, sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.2em;
+  color: #000000;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.pagination {
+  background-color: #F0F0F0;
+}
+
+.pagination-btn {
+  background-color: #F0F0F0;
+}
+
+.pagination-link {
+  font-size: 16px;
+  line-height: 20px;
+  color: #444444;
+  opacity: 0.3;
+  text-decoration: none;
+}
 
