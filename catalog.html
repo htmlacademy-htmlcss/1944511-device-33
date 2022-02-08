@@ -5,7 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Каталог товаров интернет-магазина Девайс</title>
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
+
 <body>
   <header class="page-header">
     <nav class="main-nav">
@@ -29,7 +31,7 @@
               <a class="user-nav-link" href="#">Коля Петухов</a>
             </li>
             <li class="registration-item">
-              <a class="user-nav-link" href="#">Выйти</a>
+              <a class="user-nav-link link-opacity" href="#">Выйти</a>
             </li>
           </ul>
         </li>
@@ -42,18 +44,38 @@
       </ul>
       <ul class="site-nav-list">
         <li class="site-nav-item">
-          <a class="site-nav-link" href="catalog.html">Каталог</a>
+          <a class="btn site-nav-link" href="catalog.html">Каталог</a>
+          <ul class="sub-menu">
+            <li class="sub-menu-item">
+              <a class="sub-menu-link" href="#">Виртуальная реальность</a>
+            </li>
+            <li class="sub-menu-item">
+              <a class="sub-menu-link" href="#">Фитнес-браслеты</a>
+            </li>
+            <li class="sub-menu-item">
+              <a class="sub-menu-link" href="#">Квадрокоптеры</a>
+            </li>
+            <li class="sub-menu-item">
+              <a class="sub-menu-link" href="#">Моноподы для cелфи</a>
+            </li>
+            <li class="sub-menu-item">
+              <a class="sub-menu-link" href="#">Умные часы</a>
+            </li>
+            <li class="sub-menu-item">
+              <a class="sub-menu-link" href="#">Экшн-камеры</a>
+            </li>
+          </ul>
         </li>
         <li class="site-nav-item">
           <ul class="services-list">
             <li class="services-item">
-              <a class="services-link" href="#">Доставка</a>
+              <a class="btn services-link" href="#">Доставка</a>
             </li>
             <li class="services-item">
-              <a class="services-link" href="#">Гарантия</a>
+              <a class="btn services-link" href="#">Гарантия</a>
             </li>
             <li class="services-item">
-              <a class="services-link" href="#">Контакты</a>
+              <a class="btn services-link" href="#">Контакты</a>
             </li>
           </ul>
         </li>
@@ -62,7 +84,7 @@
   </header>
 
   <main class="main-catalog">
-    <h1 class="catalog-subtitle">Моноподы для селфи</h1>
+    <h1 class="section-title catalog-title">Моноподы для селфи</h1>
     <ul class="breadcrumbs-list">
       <li class="breadcrumbs-item">
         <a class="breadcrumbs-link" href="index.html">Главная</a>
@@ -76,7 +98,7 @@
     </ul>
 
     <section class="catalog-filters">
-      <h2 class="catalog-filters-title">Фильтр:</h2>
+      <h2 class="catalog-subtitle catalog-filters-title">Фильтр:</h2>
       <form class="filters" action="https://echo.htmlacademy.ru/" method="post">
         <fieldset class="filters-area">
           <legend class="filters-area-title">Стоимость</legend>
@@ -119,13 +141,13 @@
             </li>
           </ul>
         </fieldset>
-        <button class="filters-btn" type="submit">Показать</button>
+        <button class="btn filters-btn" type="submit">Показать</button>
       </form>
     </section>
     <section class="catalog-cards">
       <div class="sort">
-        <h2 class="sort-title">сортировка:</h2>
-        <select name="sort" class="sort-select">
+        <h2 class="catalog-subtitle sort-title">сортировка:</h2>
+        <select class="sort-select" name="sort">
           <option value="popular" selected>Популярные</option>
           <option value="price">Цена</option>
         </select>
@@ -175,7 +197,7 @@
       </ul>
       <a class="catalog-link-more" href="#">Загрузить ещё</a>
       <div class="pagination">
-        <button class="btn-prev" type="button">Назад</button>
+        <button class="btn pagination-btn btn-prev" type="button">Назад</button>
         <ol class="pagination-list">
           <li class="pagination-item">
             <a class="pagination-link" href="#">1</a>
@@ -193,7 +215,7 @@
             <a class="pagination-link" href="#">15</a>
           </li>
         </ol>
-        <button type="button" class="btn-next">Вперед</button>
+        <button class="btn pagination-btn btn-next" type="button">Вперед</button>
       </div>
     </section>
   </main>
@@ -205,13 +227,13 @@
     <address class="footer-address">Санкт-Петербург, набережная реки Карповки, 5, литера П.</address>
     <ul class="services-list">
       <li class="services-item">
-        <a class="services-link" href="#">Доставка</a>
+        <a class="btn services-link" href="#">Доставка</a>
       </li>
       <li class="services-item">
-        <a class="services-link" href="#">Гарантия</a>
+        <a class="btn services-link" href="#">Гарантия</a>
       </li>
       <li class="services-item">
-        <a class="services-link" href="#">Контакты</a>
+        <a class="btn services-link" href="#">Контакты</a>
       </li>
     </ul>
     <a class="footer-tel" href="tel:+78128121212">+7 (812) 812-12-12</a>
