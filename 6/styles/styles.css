@@ -1,0 +1,456 @@
+@font-face {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Rubik, sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #444444;
+  background-color: #ffffff;
+}
+
+.main-index,
+.main-catalog {
+  flex-grow: 1;
+}
+
+/* common styles */
+
+.section-title {
+  font-family: Raleway, sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+  color: #000000;
+}
+
+.user-nav-link,
+.sub-menu-link,
+.categories-link,
+.companies-link,
+.breadcrumbs-link {
+  color: #000000;
+  text-decoration: none;
+}
+
+.btn {
+  font-family: Raleway,sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 21px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #000000;
+  text-decoration: none;
+}
+
+.container,
+.page-header {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.main-nav ul,
+.slider-list,
+.categories-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* Header */
+
+.page-header {
+  margin-top: 40px;
+  padding: 0 60px;
+  color: #000000;
+  background-color: #FFE17F;
+}
+
+.main-nav {
+
+}
+
+.user-nav-list {
+  display: flex;
+}
+
+.search,
+.search::placeholder,
+.search-button {
+  font-family: Rubik, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  background-color: #FFE17F;
+}
+
+.search::placeholder {
+  opacity: 0.3;
+}
+
+.site-nav-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sub-menu-link {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.link-opacity {
+  opacity: 0.3;
+}
+
+/* Main-index */
+
+.slider-article {
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider-pic {
+  width: 560px;
+}
+
+.slider-desc {
+  width: 560px;
+}
+
+.slider-params-title {
+  font-size: 16px;
+}
+
+.slider-params-value {
+  font-size: 36px;
+  color: #000000;
+}
+
+.slider-number {
+  font-weight: bold;
+  font-size: 180px;
+  color: #FFFFFF;
+}
+
+.categories-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.categories-item {
+  width: 160px;
+  margin-right: 40px;
+}
+
+.categories-item:last-child {
+  margin-right: 0;
+}
+
+.categories-title {
+  font-family: Raleway, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+}
+
+.services {
+  background-color: #F0F0F0;
+}
+
+.services-wrap {
+  display: flex;
+}
+
+.services .services-list {
+  width: 287px;
+}
+
+.services-desc-list {
+  width: 873px;
+}
+
+.services .active{
+  color: #FFE17F;
+}
+
+.services-desc-title {
+
+}
+
+.delivery-link {
+  font-size: 20px;
+  line-height: 23px;
+  background-color:#F0F0F0;
+}
+
+.index-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about {
+  width: 520px;
+}
+
+.companies-link {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  color: #000000;
+}
+
+.contacts {
+  width: 532px;
+}
+
+.address-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.address-desc {
+  font-style: normal;
+}
+
+.address-tel {
+  color: #444444;
+}
+
+.subscribe {
+  background-color: #F0F0F0;
+}
+
+.subscribe .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.subscribe-title {
+  width: 360px;
+}
+
+.subscribe-text {
+  width: 560px;
+}
+
+.subscribe-form {
+  width: 800px;
+}
+
+.subscribe-text:last-child {
+  width: 160px;
+}
+
+.email,
+.email::placeholder {
+  font-family: Rubik, sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  color: #000000;
+  background-color: #F0F0F0;
+}
+
+.email::placeholder {
+  opacity: 0.5;
+}
+
+.subscribe-button {
+  font-size: 18px;
+  background-color: #F0F0F0;
+}
+
+/* Footer */
+.page-footer {
+  background-color: #444444;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-row:last-child::before {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 7px;
+  background-color: #FFC700;
+}
+
+.footer-address {
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+}
+
+.page-footer .services-link {
+  color: #FFFFFF;
+}
+
+.footer-tel {
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+
+/* Main-catalog */
+
+.breadcrumbs-link {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.catalog-wrap {
+  background-color: #F0F0F0;
+}
+
+.catalog-wrap .container {
+  display: flex;
+}
+
+.catalog-filters {
+  width: 320px;
+}
+
+.catalog-cards {
+  width: 840px;
+}
+
+.catalog-cards-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.catalog-cards-item {
+  width: 360px;
+}
+
+.catalog-subtitle {
+  font-family: Raleway;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.filters {
+  color: #000000;
+
+}
+
+.filters-area-title {
+  font-weight: bold;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+}
+
+.filters label {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.sort {
+  color: #000000;
+}
+
+.sort-select,
+.sort-select option {
+  font-family: Rubik, sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  background-color: #F0F0F0;
+}
+
+.catalog-cards-wrap {
+  background-color: #FFFFFF;
+}
+
+.catalog-cards-link {
+  color: #000000;
+  text-decoration: none;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+}
+
+.card-price {
+  line-height: 21px;
+}
+
+.catalog-link-more {
+  font-family: Raleway, sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.2em;
+  color: #000000;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.pagination {
+  background-color: #F0F0F0;
+}
+
+.pagination-btn {
+  background-color: #F0F0F0;
+}
+
+.pagination-link {
+  font-size: 16px;
+  line-height: 20px;
+  color: #444444;
+  opacity: 0.3;
+  text-decoration: none;
+}
+
