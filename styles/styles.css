@@ -22,7 +22,20 @@
   font-display: swap;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   margin: 0;
   padding: 0;
   font-family: Rubik, sans-serif;
@@ -32,6 +45,11 @@ body {
   font-weight: 400;
   color: #444444;
   background-color: #ffffff;
+}
+
+.main-index,
+.main-catalog {
+  flex-grow: 1;
 }
 
 /* common styles */
@@ -64,11 +82,35 @@ body {
   text-decoration: none;
 }
 
+.container,
+.page-header {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.main-nav ul,
+.slider-list,
+.categories-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 /* Header */
 
 .page-header {
+  margin-top: 40px;
+  padding: 0 60px;
   color: #000000;
   background-color: #FFE17F;
+}
+
+.main-nav {
+
+}
+
+.user-nav-list {
+  display: flex;
 }
 
 .search,
@@ -85,6 +127,11 @@ body {
   opacity: 0.3;
 }
 
+.site-nav-list {
+  display: flex;
+  justify-content: space-between;
+}
+
 .sub-menu-link {
   font-size: 16px;
   line-height: 18px;
@@ -96,8 +143,17 @@ body {
 
 /* Main-index */
 
-.slider-article-slogan {
+.slider-article {
+  display: flex;
+  justify-content: space-between;
+}
 
+.slider-pic {
+  width: 560px;
+}
+
+.slider-desc {
+  width: 560px;
 }
 
 .slider-params-title {
@@ -115,6 +171,20 @@ body {
   color: #FFFFFF;
 }
 
+.categories-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.categories-item {
+  width: 160px;
+  margin-right: 40px;
+}
+
+.categories-item:last-child {
+  margin-right: 0;
+}
+
 .categories-title {
   font-family: Raleway, sans-serif;
   font-style: normal;
@@ -126,6 +196,18 @@ body {
 
 .services {
   background-color: #F0F0F0;
+}
+
+.services-wrap {
+  display: flex;
+}
+
+.services .services-list {
+  width: 287px;
+}
+
+.services-desc-list {
+  width: 873px;
 }
 
 .services .active{
@@ -142,12 +224,25 @@ body {
   background-color:#F0F0F0;
 }
 
+.index-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about {
+  width: 520px;
+}
+
 .companies-link {
   font-weight: bold;
   font-size: 18px;
   line-height: 20px;
   letter-spacing: -0.02em;
   color: #000000;
+}
+
+.contacts {
+  width: 532px;
 }
 
 .address-title {
@@ -166,6 +261,28 @@ body {
 
 .subscribe {
   background-color: #F0F0F0;
+}
+
+.subscribe .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.subscribe-title {
+  width: 360px;
+}
+
+.subscribe-text {
+  width: 560px;
+}
+
+.subscribe-form {
+  width: 800px;
+}
+
+.subscribe-text:last-child {
+  width: 160px;
 }
 
 .email,
@@ -191,6 +308,19 @@ body {
   background-color: #444444;
 }
 
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-row:last-child::before {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 7px;
+  background-color: #FFC700;
+}
+
 .footer-address {
   font-size: 16px;
   line-height: 19px;
@@ -214,6 +344,31 @@ body {
   line-height: 19px;
 }
 
+.catalog-wrap {
+  background-color: #F0F0F0;
+}
+
+.catalog-wrap .container {
+  display: flex;
+}
+
+.catalog-filters {
+  width: 320px;
+}
+
+.catalog-cards {
+  width: 840px;
+}
+
+.catalog-cards-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.catalog-cards-item {
+  width: 360px;
+}
+
 .catalog-subtitle {
   font-family: Raleway;
   font-weight: 800;
@@ -226,7 +381,7 @@ body {
 
 .filters {
   color: #000000;
-  background-color: #F0F0F0;
+
 }
 
 .filters-area-title {
@@ -242,7 +397,6 @@ body {
 
 .sort {
   color: #000000;
-  background-color: #F0F0F0;
 }
 
 .sort-select,
@@ -251,6 +405,10 @@ body {
   font-size: 18px;
   line-height: 30px;
   background-color: #F0F0F0;
+}
+
+.catalog-cards-wrap {
+  background-color: #FFFFFF;
 }
 
 .catalog-cards-link {
