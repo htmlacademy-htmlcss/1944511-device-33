@@ -92,21 +92,54 @@ body {
   list-style-type: none;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* Header */
 
 .page-header {
   margin-top: 40px;
-  padding: 0 60px;
+  padding: 0 60px 23px;
   color: #000000;
   background-color: #FFE17F;
 }
 
 .main-nav {
+  margin-top: -22px;
+}
 
+.logo {
+  display: block;
+  margin-bottom: 30px;
 }
 
 .user-nav-list {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.user-nav-search {
+  margin-right: 26px;
+}
+
+.user-nav-compare {
+  margin-left: auto;
+  margin-right: 18px;
+}
+
+.form-search {
+  width: 517px;
+  font-size: 0;
 }
 
 .search,
@@ -119,13 +152,42 @@ body {
   background-color: #FFE17F;
 }
 
+.search {
+  width: 355px;
+  padding: 10px 10px 10px 48px;
+}
+
+.search-button {
+  padding: 10px 56px;
+  border-left: none;
+  cursor: pointer;
+}
+
 .search::placeholder {
   opacity: 0.3;
 }
 
+.registration-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.registration-item:not(:last-child) {
+  margin-right: 26px;
+}
+
 .site-nav-list {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.site-nav-item:first-child {
+  margin-right: auto;
+}
+
+.sub-menu {
+  display: none;
 }
 
 .sub-menu-link {
@@ -137,15 +199,59 @@ body {
   opacity: 0.3;
 }
 
+/* Services */
+
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.services-item:not(:last-child) {
+  margin-right: 45px;
+}
+
+.services-link {
+  display: block;
+}
+
 /* Main-index */
 
+/* Slider */
+
+.slider {
+  background-image: linear-gradient(180deg, #FFE17F 137px, transparent 137px);
+  outline: 1px solid red;  /* delete */
+}
+
+.slider-list {
+  counter-reset: num;
+}
+
+.slider-item {
+  text-align: right;
+}
+
+.slider-item::before {
+  content: "0"counter(num);
+  counter-increment: num;
+  font-weight: bold;
+  font-size: 180px;
+  line-height: 153px;
+  color: #FFFFFF;
+  margin-right: 60px;
+}
+
 .slider-article {
+  margin-top: -164px;
   display: flex;
   justify-content: space-between;
+  outline: 1px solid green; /* delete */
+
 }
 
 .slider-pic {
   width: 560px;
+  outline: 1px solid blue; /* delete */
 }
 
 .slider-desc {
@@ -161,11 +267,15 @@ body {
   color: #000000;
 }
 
-.slider-number {
+/* .slider-number {
+  margin: 0;
+  padding: 0 60px;
   font-weight: bold;
   font-size: 180px;
+  line-height: 153px;
   color: #FFFFFF;
-}
+  text-align: right;
+} */
 
 .categories-list {
   display: flex;
