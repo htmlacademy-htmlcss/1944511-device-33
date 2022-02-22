@@ -71,6 +71,7 @@ body {
 }
 
 .btn {
+  display: inline-block;
   font-family: Raleway,sans-serif;
   font-size: 18px;
   font-weight: 800;
@@ -79,6 +80,7 @@ body {
   letter-spacing: 0.2em;
   color: #000000;
   text-decoration: none;
+  text-align: center;
 }
 
 .container {
@@ -137,8 +139,11 @@ body {
   margin-right: 18px;
 }
 
+.user-nav-link {
+  display: block
+}
+
 .form-search {
-  width: 517px;
   font-size: 0;
 }
 
@@ -186,8 +191,31 @@ body {
   margin-right: auto;
 }
 
+/* Sub-menu */
+
+.sub-menu-wrap {
+  position: relative;
+}
+
+.sub-menu-wrap:hover .sub-menu {
+  display: flex;
+}
+
 .sub-menu {
+  position: absolute;
+  top: 100%;
+  left: -10px;
+  width: 1160px;
+  left: -60px;
+  min-height: 180px;
+  z-index: 5;
+  padding: 30px 10px;
+  background-color: #FFE17F;
   display: none;
+}
+
+.sub-menu-item {
+  width: 211px;
 }
 
 .sub-menu-link {
@@ -210,15 +238,13 @@ body {
   margin-right: 45px;
 }
 
-.services-link {
-  display: block;
-}
-
 /* Main-index */
 
 /* Slider */
 
 .slider {
+  position: relative;
+  margin-bottom: 70px;
   background-image: linear-gradient(180deg, #FFE17F 137px, transparent 137px);
   outline: 1px solid red;  /* delete */
 }
@@ -246,7 +272,6 @@ body {
   display: flex;
   justify-content: space-between;
   outline: 1px solid green; /* delete */
-
 }
 
 .slider-pic {
@@ -255,7 +280,44 @@ body {
 }
 
 .slider-desc {
-  width: 560px;
+  width: 600px;
+  padding: 120px 0 38px 40px;
+  text-align: left;
+}
+
+.slider-article-slogan {
+  margin-top: 0;
+  margin-bottom: 29px;
+}
+
+.slider-article-text {
+  margin-top: 0;
+  margin-bottom: 51px;
+}
+
+.slider-link {
+  padding: 10px 0;
+  margin-bottom: 59px;
+  min-width: 220px;
+}
+
+.slider-params {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.slider-params-item {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+  justify-content: start;;
+  max-width: 200px;
+}
+
+.slider-params-item:not(:last-child) {
+  margin-right: 20px;
 }
 
 .slider-params-title {
@@ -263,19 +325,52 @@ body {
 }
 
 .slider-params-value {
+  margin-left: 0;
+  margin-bottom: 12px;
   font-size: 36px;
   color: #000000;
 }
 
-/* .slider-number {
-  margin: 0;
-  padding: 0 60px;
-  font-weight: bold;
-  font-size: 180px;
-  line-height: 153px;
-  color: #FFFFFF;
-  text-align: right;
-} */
+.slider-buttons {
+  position: absolute;
+  width: 530px;
+  top: 211px;
+  left: 30px;
+  display: flex;
+}
+
+.slider-button {
+  width: 20px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.slider-prev {
+  margin-right: auto;
+}
+
+.slider-pagination {
+  position: absolute;
+  top: 345px;
+  right: 0;
+  display: flex;
+  font-size: 0;
+  padding-left: 0;
+}
+
+.slider-pagination-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.slider-pagination-button {
+  cursor: pointer;
+}
+
+/* Categories */
+
+.categories {
+  padding-bottom: 70px;
+}
 
 .categories-list {
   display: flex;
@@ -300,29 +395,98 @@ body {
   letter-spacing: -0.02em;
 }
 
+/* Services */
+
 .services {
+  height: 289px;
+  margin-bottom: 70px;
+  margin-top: 102px;
   background-color: #F0F0F0;
+}
+
+.services-container {
+  position: relative;
 }
 
 .services-wrap {
   display: flex;
+  position: absolute;
+  top: -102px;
 }
 
 .services .services-list {
-  width: 287px;
+  display: block;
+  align-self: start;
+  padding: 65px 0;
+  border-right: 7px solid black;
 }
 
-.services-desc-list {
-  width: 873px;
+.services .services-item {
+  padding-right: 120px;
+  margin-bottom: 35px;
+  margin-right: 0;
 }
 
-.services .active{
+.services .services-item:last-child {
+  margin-bottom: 0;
+}
+
+.services-item.active {
+  background-color: #000000;
+}
+
+.services .services-link {
+  padding: 10px 0;
+  min-width: 160px;
+}
+
+.active .services-link{
   color: #FFE17F;
 }
 
-.services-desc-title {
-
+.services-desc-list {
+  padding: 72px 63px 72px 116px;
 }
+
+.services-desc-item {
+  position: relative;
+  padding-right: 242px;
+}
+
+.services-desc-item::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  content: "";
+  display: block;
+  width: 171px;
+  height: 195px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.services-desc-warranty::after {
+  background-image: url(../images/warranty.svg);
+}
+
+.services-desc-delivery::after {
+  background-image: url(../images/delivery.svg);
+}
+
+.services-desc-credit::after {
+  background-image: url(../images/credit.svg);
+}
+
+.services-desc-item:not(:first-child) {
+  display: none;     /* delete */
+}
+
+.services-desc-title {
+  margin-top: 0;
+  margin-bottom: 34px;
+}
+
+/* Delivery */
 
 .delivery-link {
   font-size: 20px;
