@@ -296,7 +296,7 @@ body {
 }
 
 .slider-link {
-  padding: 10px 0;
+  padding: 10px 5px;
   margin-bottom: 59px;
   min-width: 220px;
 }
@@ -436,7 +436,7 @@ body {
 }
 
 .services .services-link {
-  padding: 10px 0;
+  padding: 10px 5px;
   min-width: 160px;
 }
 
@@ -542,7 +542,7 @@ body {
 }
 
 .about-link {
-  padding: 10px 0;
+  padding: 10px 5px;
   min-width: 270px;
 }
 
@@ -590,7 +590,7 @@ body {
 }
 
 .contacts-link {
-  padding: 10px 0;
+  padding: 10px 5px;
   min-width: 247px;
 }
 
@@ -727,22 +727,82 @@ body {
 
 /* Main-catalog */
 
+.catalog-title-container {
+  padding: 35px 60px;
+}
+
+.catalog-title {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.breadcrumbs-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.breadcrumbs-item:not(:last-child) {
+  margin-right: 16px;
+}
+
 .breadcrumbs-link {
+  padding-right: 20px;
   font-size: 16px;
   line-height: 19px;
+}
+
+.breadcrumbs-item:last-child .breadcrumbs-link {
+  padding-right: 0;
 }
 
 .catalog-wrap {
   background-color: #F0F0F0;
 }
 
-.catalog-wrap .container {
+.catalog-container {
   display: flex;
 }
 
+/* Filter  */
+
 .catalog-filters {
   width: 320px;
+  padding: 25px 40px 25px 60px;
 }
+
+.catalog-filters-title {
+  margin-bottom: 60px;
+  margin-top: 0;
+}
+
+.filters-area-wrap {
+  margin-right: 20px;
+  border-top: 2px solid #000000;
+}
+
+.filters-area {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 35px;
+  border: none;
+}
+
+.filters-area-title {
+  padding-top: 12px;
+  padding-bottom: 20px;
+}
+
+.filters input {
+  display: none;
+}
+
+.filters-btn {
+  padding: 10px 5px;
+  min-width: 220px;
+  border: none;
+}
+
+/* Cards */
 
 .catalog-cards {
   width: 840px;
