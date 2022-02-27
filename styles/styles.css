@@ -108,10 +108,10 @@ body {
 /* Header */
 
 .page-header {
-  margin-top: 40px;
-  padding: 0 60px 23px;
+  padding: 40px 60px 23px;
   color: #000000;
-  background-color: #FFE17F;
+  background-image: linear-gradient(
+180deg, transparent 40px, #FFE17F 40px);
 }
 
 .main-nav {
@@ -204,9 +204,8 @@ body {
 .sub-menu {
   position: absolute;
   top: 100%;
-  left: -10px;
-  width: 1160px;
   left: -60px;
+  width: 1160px;
   min-height: 180px;
   z-index: 5;
   padding: 30px 10px;
@@ -312,7 +311,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column-reverse;
-  justify-content: start;;
+  justify-content: start;
   max-width: 200px;
 }
 
@@ -396,20 +395,13 @@ body {
 /* Services */
 
 .services {
-  height: 289px;
+  padding-bottom: 72px;
   margin-bottom: 70px;
-  margin-top: 102px;
-  background-color: #F0F0F0;
-}
-
-.services-container {
-  position: relative;
+  background-image: linear-gradient(180deg, transparent 102px, #F0F0F0 102px);
 }
 
 .services-wrap {
   display: flex;
-  position: absolute;
-  top: -102px;
 }
 
 .services .services-list {
@@ -429,7 +421,7 @@ body {
   margin-bottom: 0;
 }
 
-.services-item.active {
+.services-item-active {
   background-color: #000000;
 }
 
@@ -438,7 +430,7 @@ body {
   min-width: 160px;
 }
 
-.active .services-link{
+.services-item-active .services-link{
   color: #FFE17F;
 }
 
@@ -671,7 +663,7 @@ body {
 }
 
 .footer-row:nth-of-type(1) {
-  margin-bottom: 65px;
+  margin-bottom: 47px;
 }
 
 .footer-row:last-child::before {
@@ -827,7 +819,6 @@ body {
 .sort {
   padding: 25px 40px;
   display: flex;
-  align-items: center;
   color: #000000;
 }
 
