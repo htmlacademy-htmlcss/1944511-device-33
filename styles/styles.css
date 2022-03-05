@@ -118,9 +118,24 @@ body {
   margin-top: -22px;
 }
 
+/* Logo */
 .logo {
-  display: block;
+  display: inline-block;
+  padding: 2px;
   margin-bottom: 30px;
+  transition: 0.3s;
+}
+
+.logo:hover {
+  opacity: 0.6;
+}
+
+.logo:active {
+  opacity: 0.3;
+}
+
+.logo:focus {
+  outline: 2px solid #AF4FFF;
 }
 
 .user-nav-list {
@@ -276,6 +291,11 @@ body {
 
 .slider-pic {
   width: 560px;
+}
+
+.slider-img {
+  max-width: 100%;
+  object-fit: contain;
 }
 
 .slider-desc {
@@ -652,7 +672,7 @@ body {
   margin-bottom: 35px;
 }
 
-.footer-line {  
+.footer-line {
   width: 80px;
   height: 7px;
   background-color: #FFC700;
@@ -872,6 +892,8 @@ body {
 }
 
 .card-img {
+  max-width: 100%;
+  object-fit: contain;
   margin-bottom: 32px;
 }
 
