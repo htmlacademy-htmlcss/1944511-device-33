@@ -119,6 +119,27 @@
               <div class="filters-area-wrap">
                 <fieldset class="filters-area">
                     <legend class="filters-area-title">Стоимость</legend>
+                    <div class="range">
+                      <div class="range-scale">
+                        <div class="range-bar" style="left: 0; width: 119px">
+                          <button class="range-toggle toggle-min">
+                            <span class="visually-hidden">Изменить минимальную цену.</span>
+                          </button>
+                          <button class="range-toggle toggle-max">
+                            <span class="visually-hidden">Изменить максимальную цену.</span>
+                          </button>
+                        </div>
+                      </div>
+
+                      <div class="range-wrapper-inputs">
+                        <label class="catalog-filter-label">
+                          от <input class="range-input" type="number" value="0" name="min-price">
+                        </label>
+                        <label class="catalog-filter-label">
+                          до <input class="range-input" type="number" value="5000" name="max-price">
+                        </label>
+                      </div>
+                    </div>
                 </fieldset>
               </div>
             <div class="filters-area-wrap">
@@ -126,24 +147,39 @@
                 <legend class="filters-area-title">Цвет</legend>
                 <ul class="filters-area-list list-reset">
                   <li class="filters-area-item">
-                    <input class="filters-color-field" type="checkbox" name="color" id="color-black" value="black" checked>
-                    <label class="filters-color-label" for="color-black">Черный</label>
+                    <label class="control">
+                      <input class="visually-hidden control-input" type="checkbox" name="color" value="black" checked>
+                      <span class="control-mark"></span>
+                      <span class="control-label">Черный</span>
+                    </label>
                   </li>
                   <li class="filters-area-item">
-                    <input class="filters-color-field" type="checkbox" name="color" id="color-white" value="white" checked>
-                    <label class="filters-color-label" for="color-white">Белый</label>
+                    <label class="control">
+                      <input class="visually-hidden control-input" type="checkbox" name="color" value="white" checked>
+                      <span class="control-mark"></span>
+                      <span class="control-label">Белый</span>
+                    </label>
                   </li>
                   <li class="filters-area-item">
-                    <input class="filters-color-field" type="checkbox" name="color" id="color-blue" value="blue">
-                    <label class="filters-color-label" for="color-blue">Синий</label>
+                    <label class="control">
+                      <input class="visually-hidden control-input" type="checkbox" name="color" value="blue">
+                      <span class="control-mark"></span>
+                      <span class="control-label">Синий</span>
+                    </label>
                   </li>
                   <li class="filters-area-item">
-                    <input class="filters-color-field" type="checkbox" name="color" id="color-red" value="red">
-                    <label class="filters-color-label" for="color-red">Красный</label>
+                    <label class="control">
+                      <input class="visually-hidden control-input" type="checkbox" name="color" value="red">
+                      <span class="control-mark"></span>
+                      <span class="control-label">Красный</span>
+                    </label>
                   </li>
                   <li class="filters-area-item">
-                    <input class="filters-color-field" type="checkbox" name="color" id="color-pink" value="pink">
-                    <label class="filters-color-label" for="color-pink">Розовый</label>
+                    <label class="control">
+                      <input class="visually-hidden control-input" type="checkbox" name="color" value="pink">
+                      <span class="control-mark"></span>
+                      <span class="control-label">Розовый</span>
+                    </label>
                   </li>
                 </ul>
               </fieldset>
@@ -153,12 +189,18 @@
                 <legend class="filters-area-title">Bluetooth</legend>
                 <ul class="filters-area-list list-reset">
                   <li class="filters-area-item">
-                    <input class="filters-bluetooth-field" type="radio" name="bluetooth" id="bluetooth-yes" value="yes" checked>
-                    <label class="filters-bluetooth-label" for="bluetooth-yes">Есть</label>
+                    <label class="control">
+                      <input class="visually-hidden control-input" type="radio" name="bluetooth" value="yes" checked>
+                      <span class="control-mark"></span>
+                      <span class="control-label">Есть</span>
+                    </label>
                   </li>
                   <li class="filters-area-item">
-                    <input class="filters-bluetooth-field" type="radio" name="bluetooth" id="bluetooth-no" value="no">
-                    <label class="filters-bluetooth-label" for="bluetooth-no">Нет</label>
+                    <label class="control">
+                      <input class="visually-hidden control-input" type="radio" name="bluetooth" value="no">
+                      <span class="control-mark"></span>
+                      <span class="control-label">Нет</span>
+                    </label> 
                   </li>
                 </ul>
               </fieldset>
