@@ -459,11 +459,15 @@
                  <p class="order-form-area">
                     <span class="amount-label-wrap">
                       <label class="order-form-label" for="order-amount">Количество:</label>
-                      <button class="order-tooltip"></button>
+                      <span class="order-tooltip">
+                        <button class="order-tooltip-btn" aria-labelledby="tooltip-label"></button>
+                        <span class="order-tooltip-text" role="tooltip" id="tooltip-label">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям
+                          к провозу багажа.</span>
+                      </span>
                     </span>
                     <span class="amount-input-wrap amount-input-error">
                       <button class="order-button order-button-minus" type="button"><span class="visually-hidden">Уменьшить количество</span></button>
-                      <input  class="order-form-input order-form-number" type="number" id="order-amount" name="order-email" value="1" size="5">
+                      <input  class="order-form-input order-form-number" type="number" id="order-amount" name="order-amount" value="1" size="5">
                       <button class="order-button order-button-plus" type="button"><span class="visually-hidden">Увеличить количество</span></button>
                     </span>
                  </p>

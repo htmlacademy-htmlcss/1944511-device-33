@@ -1957,6 +1957,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .order-form {
@@ -2061,42 +2062,81 @@ body {
   outline: 2px solid #FF3D3D;
 }
 
+/* Order-tooltip */
+
 .order-tooltip {
+  position: relative;
+  margin-left: 8px;
+}
+
+.order-tooltip-btn {
   width: 26px;
   height: 26px;
   padding: 0;
-  align-self: start;
-  margin-left: 8px;
   border: none;
   border-radius: 50%;
   background-color: #FFE17F;
   background-image: url(../images/icons/icon-delivery-i.svg);
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.order-tooltip:hover {
+.order-tooltip-btn:hover {
   background-color: #FFC700;
 }
 
-.order-tooltip::before {
+.order-tooltip-btn::before {
   display: block;
   width: 26px;
   height: 26px;
   content: "";
 }
 
-.order-tooltip:active {
-  opacity: 0.3;
+.order-tooltip-btn:active {
+  opacity: 0.6;
 }
 
-.order-tooltip:focus {
+.order-tooltip-btn:focus {
   outline: none;
 }
 
-.order-tooltip:focus::before {
+.order-tooltip-btn:focus::before {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
+}
+
+.order-tooltip-text {
+  position: absolute;
+  top: 100%;
+  right: -32px;
+  z-index: 1;
+  display: none;
+  width: 200px;
+  padding: 19px;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.order-tooltip-text::before {
+  position: absolute;
+  top: 0;
+  right: 40px;
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: #000000;
+  content: "";
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.order-tooltip-btn:hover + .order-tooltip-text,
+.order-tooltip-btn:focus + .order-tooltip-text {
+  display: block;
 }
 
 .order-button {
