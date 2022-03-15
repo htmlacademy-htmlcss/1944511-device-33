@@ -36,8 +36,41 @@
           <li class="user-nav-item user-nav-compare">
             <a class="user-nav-link user-nav-link-compare" href="#">Сравнить</a>
           </li>
-          <li class="user-nav-item">
+          <li class="user-nav-item user-nav-item-cart">
             <a class="user-nav-link user-nav-link-cart" href="#">Корзина</a>
+            <div class="popover-cart">
+
+                <h2 class="visually-hidden">Корзина</h2>
+                <ul class="cart-list list-reset">
+                  <li class="cart-item">
+                    <a class="cart-elem" href="#">
+                      <img class="cart-elem-img" src="./images/product-1.jpg" alt="Любительская селфи-палка" width="39" height="43">
+                      <h3 class="cart-elem-title">Любительская<br> селфи-палка</h3>
+                    </a>
+                    <button class="cart-elem-del" type="button"><span class="visually-hidden">Удалить товар.</span></button>
+                  </li>
+                  <li class="cart-item">
+                    <a class="cart-elem" href="#">
+                      <img class="cart-elem-img" src="./images/product-2.jpg" alt="Профессиональная
+                      селфи-палка" width="39" height="43">
+                      <h3 class="cart-elem-title">Профессиональная<br>
+                        селфи-палка</h3>
+                    </a>
+                    <button class="cart-elem-del" type="button"><span class="visually-hidden">Удалить товар.</span></button>
+                  </li>
+                </ul>
+                <dl class="summary-list">
+                  <div class="summary-item">
+                    <dt class="summary-title">Товаров:</dt>
+                    <dd class="summary-desc">2</dd>
+                  </div>
+                  <div class="summary-item">
+                    <dt class="summary-title">Сумма:</dt>
+                    <dd class="summary-desc">2000 ₽</dd>
+                  </div>
+                </dl>
+                  <a class="btn cart-open-link" href="#">Открыть корзину</a>
+            </div>
           </li>
         </ul>
         <ul class="site-nav-list list-reset">
