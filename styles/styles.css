@@ -35,6 +35,7 @@ html {
 body {
   display: flex;
   flex-direction: column;
+  min-width: 1160px;
   min-height: 100%;
   margin: 0;
   padding: 0;
@@ -213,11 +214,9 @@ body {
 .slider-button:focus,
 .services-item-active .services-link:focus,
 .delivery-link:focus,
-.delivery-info:focus,
 .companies-link:focus,
 .address-tel:focus,
 .subscribe-button:focus,
-.email:focus,
 .page-footer .services-link:focus,
 .footer-tel:focus,
 .htmlacademy-link:focus,
@@ -312,7 +311,7 @@ body {
 }
 
 .form-search {
-  font-size: 0;
+  display: flex;
 }
 
 .search,
@@ -343,6 +342,7 @@ body {
 }
 
 .search-button {
+  max-width: 300px;
   padding: 10px 56px;
   border: 2px solid #000000;
   border-left-width: 1px;
@@ -999,6 +999,25 @@ body {
   transition: 0.3s;
 }
 
+.delivery-info::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 40px;
+  height: 40px;
+  content: "";
+}
+
+.delivery-info:focus {
+  outline: none;
+}
+
+.delivery-info:focus::before {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
 .delivery-info-img {
   margin: auto;
 }
@@ -1195,6 +1214,17 @@ body {
 
 .email::placeholder {
   opacity: 0.5;
+}
+
+.email:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+  background-color: #DCDCDC;
+}
+
+.email:not(:placeholder-shown):invalid {
+  outline: none;
+  border-bottom: 2px solid #FF3D3D;
 }
 
 .subscribe-button {
@@ -1923,7 +1953,7 @@ body {
   top: 0;
   left: 0;
   display: flex;
-  display: none;
+  /* display: none; */
   width: 100%;
   height: 100%;
   background-color: rgba(240, 240, 240, 0.9);
@@ -1968,7 +1998,7 @@ body {
 .order-form-row {
   margin-bottom: 42px;
   display: flex;
-  align-items: flex-start;
+  align-items: flex-end;
   justify-content: space-between;
 }
 
@@ -2012,17 +2042,17 @@ body {
   background-color: #DCDCDC;
 }
 
-.order-form-input:invalid {
+.order-form-input:not(:placeholder-shown):invalid {
   outline: 2px solid #FF3D3D;
+}
+
+.order-form-input:not(:placeholder-shown):invalid
++ span {
+ color: #FF3D3D;
 }
 
 .order-form-input:disabled {
   opacity: 0.3;
-}
-
-.order-form-input:invalid
-+ span {
- color: #FF3D3D;
 }
 
 .order-form-input-half {
@@ -2056,10 +2086,7 @@ body {
 
 .amount-input-wrap {
   display: flex;
-}
-
-.amount-input-error {
-  outline: 2px solid #FF3D3D;
+  position: relative;
 }
 
 /* Order-tooltip */
@@ -2140,7 +2167,7 @@ body {
 }
 
 .order-button {
- position: relative;
+ position: absolute;
   width: 60px;
   height: 60px;
   border: none;
@@ -2148,6 +2175,10 @@ body {
   cursor: pointer;
   padding: 0;
   transition: 0.3s;
+}
+
+.order-button-plus {
+  right: 0;
 }
 
 .order-button:hover {
@@ -2186,7 +2217,9 @@ body {
 }
 
 .order-form-number {
-  width: 60px;
+  width: 180px;
+  padding-left: 60px;
+  padding-right: 60px;
   text-align: center;
 }
 
