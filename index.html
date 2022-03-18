@@ -2,7 +2,11 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Интернет-магазин Девайс</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
@@ -15,8 +19,11 @@
         <ul class="user-nav-list list-reset">
           <li class="user-nav-item user-nav-search">
             <form action="https://echo.htmlacademy.ru/" class="form-search" method="get">
-              <label class="visually-hidden" for="search">Поиск по сайту</label>
-              <input class="search" id="search" type="text" name="search" placeholder="Поиск по сайту">
+              <div class="search-wrap">
+                <label class="visually-hidden" for="search">Поиск по сайту</label>
+                <input class="search" id="search" type="text" name="search" placeholder="Поиск по сайту">
+                <span class="search-rect"></span>
+              </div>
               <button class="search-button" type="submit">Найти</button>
             </form>
           </li>
@@ -39,7 +46,6 @@
           <li class="user-nav-item user-nav-item-cart">
             <a class="user-nav-link user-nav-link-cart" href="#">Корзина</a>
             <div class="popover-cart">
-
                 <h2 class="visually-hidden">Корзина</h2>
                 <ul class="cart-list list-reset">
                   <li class="cart-item">

@@ -35,7 +35,7 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  min-width: 1160px;
+  min-width: 1200px;
   min-height: 100%;
   margin: 0;
   padding: 0;
@@ -164,7 +164,6 @@ body {
 .logo {
   display: inline-block;
   margin-bottom: 30px;
-  transition: 0.3s;
 }
 
 .logo:hover,
@@ -205,8 +204,6 @@ body {
 }
 
 .logo:focus,
-.search:focus,
-.search-button:focus,
 .user-nav-link:focus,
 .site-nav-link:focus,
 .page-header .services-link:focus,
@@ -336,19 +333,54 @@ body {
   background-position: center left 16px;
 }
 
+.search-wrap {
+  position: relative;
+}
+
+.search-rect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.search:focus + .search-rect {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+  z-index: 2;
+}
+
 .search:disabled,
 .search-button:disabled {
   opacity: 0.3;
 }
 
 .search-button {
+  position: relative;
   max-width: 300px;
   padding: 10px 56px;
   border: 2px solid #000000;
   border-left-width: 1px;
   border-radius: 0px 50px 50px 0px;
   cursor: pointer;
-  transition: 0.3s;
+}
+
+.search-button::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: "";
+}
+
+.search-button:focus:before {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 4px;
 }
 
 .search-button:hover {
@@ -387,7 +419,6 @@ body {
 .site-nav-link {
   display: flex;
   align-items: center;
-  transition: 0.3s;
 }
 
 .site-nav-link:hover .site-nav-circle {
@@ -436,15 +467,13 @@ body {
   position: relative;
 }
 
-.sub-menu-wrap:hover .sub-menu {
-  display: flex;
-}
-
+.sub-menu-wrap:hover .sub-menu,
 .sub-menu-wrap:focus-within .sub-menu {
   display: flex;
 }
 
-.sub-menu-wrap:hover .site-nav-circle:before {
+.sub-menu-wrap:hover .site-nav-circle:before,
+.sub-menu-wrap:focus-within .site-nav-circle:before {
   display: none;
 }
 
@@ -490,11 +519,20 @@ body {
 
 /* Popover */
 
+.user-nav-item-cart:hover .popover-cart {
+  display: block;
+}
+
+.user-nav-item-cart:focus-within .popover-cart {
+  display: block;
+}
+
 .popover-cart {
   position: absolute;
   top: 100%;
   left: -140px;
-  z-index: 1;
+  z-index: 100;
+  display: none;
   width: 320px;
   font-size: 16px;
   line-height: 20px;
@@ -502,7 +540,6 @@ body {
   background-color: #000000;
   border: 1px dashed #7B61FF;
   border-radius: 5px;
-
 }
 
 .popover-cart:before {
@@ -582,7 +619,6 @@ body {
   padding: 15px 22px;
   margin: 20px;
   background-color: #ffffff;
-  transition: 0.3s;
 }
 
 .cart-open-link:hover {
@@ -617,6 +653,11 @@ body {
 
 .slider-item {
   text-align: right;
+}
+
+/* Скрывает неактивные элементы слайдера */
+.slider-item:not(:first-child) {
+  display: none;
 }
 
 .slider-item::before {
@@ -801,7 +842,6 @@ body {
   background-color: #FFE17F;
   background-repeat: no-repeat;
   background-position: center;
-  transition: 0.3s;
 }
 
 .categories-link-virtual::before {
@@ -967,7 +1007,6 @@ body {
   line-height: 23px;
   background-color:#F0F0F0;
   margin-bottom: 70px;
-  transition: 0.3s;
 }
 
 .delivery-link::before {
@@ -996,7 +1035,6 @@ body {
   background-color:rgba(220, 220, 220, 0.5);
   transform: translateY(-50%);
   cursor: pointer;
-  transition: 0.3s;
 }
 
 .delivery-info::before {
@@ -1181,8 +1219,9 @@ body {
 }
 
 .subscribe-form {
+  display: flex;
+  align-items: flex-end;
   margin-top: 144px;
-  font-size: 0;
 }
 
 .subscribe-text:last-child {
@@ -1195,36 +1234,43 @@ body {
   background-position: center left;
 }
 
-
 .email,
 .email::placeholder {
   font-family: Rubik, sans-serif;
   font-size: 18px;
   line-height: 30px;
-  color: #000000;
-  background-color: #F0F0F0;
 }
 
 .email {
   width: 557px;
   padding: 11px 16px;
+  color: #444444;
   border: none;
   border-bottom: 3px solid #C4C4C4;
+  background-color: transparent;
 }
 
 .email::placeholder {
-  opacity: 0.5;
+  color: rgba(68, 68, 68, 0.5);
 }
 
 .email:focus {
-  outline: 2px solid #AF4FFF;
-  outline-offset: 2px;
+  outline: none;
   background-color: #DCDCDC;
 }
 
 .email:not(:placeholder-shown):invalid {
   outline: none;
-  border-bottom: 2px solid #FF3D3D;
+  border-bottom-color:#FF3D3D;
+  color: rgba(68, 68, 68, 0.5);
+}
+
+.email:disabled {
+  border-bottom-color: #C4C4C4;
+}
+
+.email:disabled::placeholder {
+  color: rgba(68, 68, 68, 0.3);
 }
 
 .subscribe-button {
@@ -1233,12 +1279,12 @@ body {
   border: 3px solid #CECECE;
   background-color: #F0F0F0;
   cursor: pointer;
-  transition: 0.3s;
 }
 
 .subscribe-button:hover {
   color: #ffffff;
   background-color: #000000;
+  border-color: #000000;
 }
 
 .subscribe-button:active {
@@ -1285,7 +1331,6 @@ body {
 
 .page-footer .services-link {
   color: #FFFFFF;
-  transition: 0.3s;
 }
 
 .page-footer .services-link:hover {
@@ -1298,7 +1343,6 @@ body {
   font-size: 16px;
   line-height: 20px;
   color: #FFFFFF;
-  transition: 0.3s;
 }
 
 .footer-tel:hover {
@@ -1318,7 +1362,6 @@ body {
   height: 40px;
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 50%;
-  transition: 0.3s;
 }
 
 .footer-social-link:hover {
@@ -1362,7 +1405,6 @@ body {
 
 .htmlacademy-link {
   margin-left: auto;
-  transition: 0.3s;
 }
 
 .htmlacademy-link:hover svg path {
@@ -1512,7 +1554,6 @@ body {
   border: 2px solid #000000;
   border-radius: 50%;
   cursor: pointer;
-  transition: 0.3s;
 }
 
 .range-toggle-rect {
@@ -1595,7 +1636,6 @@ body {
 .control {
   display: flex;
   align-items: center;
-  transition: 0.3s;
 }
 
 .control:hover > .control-mark,
@@ -1700,7 +1740,6 @@ body {
   padding: 0;
   background-color: transparent;
   display: flex;
-  transition: 0.3s;
   cursor: pointer;
 }
 
@@ -1762,7 +1801,6 @@ body {
 .catalog-cards-item {
   position: relative;
   width: 360px;
-  transition: 0.3s;
 }
 
 .catalog-cards-link {
@@ -1843,12 +1881,15 @@ body {
   margin: auto;
 }
 
-.catalog-cards-item:hover .card-overlay {
+.catalog-cards-item:hover .card-overlay,
+.catalog-cards-item:focus-within .card-overlay {
   display: flex;
 }
 
 .catalog-cards-item:hover .card-title,
-.catalog-cards-item:hover .card-price {
+.catalog-cards-item:hover .card-price,
+.catalog-cards-item:focus-within .card-title,
+.catalog-cards-item:focus-within .card-price {
   color: rgba(0, 0, 0, 0.6);
 }
 
@@ -1879,7 +1920,6 @@ body {
   color: #000000;
   text-transform: uppercase;
   text-decoration: none;
-  transition:0.3s;
 }
 
 .catalog-link-more:hover {
@@ -1908,7 +1948,6 @@ body {
   background-color: #F0F0F0;
   border: none;
   cursor: pointer;
-  transition: 0.3s;
 }
 
 .pagination-btn:hover {
@@ -1931,7 +1970,6 @@ body {
   line-height: 20px;
   color: rgba(68, 68, 68, 0.3);
   text-decoration: none;
-  transition: 0.3s;
 }
 
 .pagination-link:hover {
@@ -1947,13 +1985,14 @@ body {
 }
 
 /* Модальное окно */
-
+/* Появляется через display: flex; */
 .modal-container {
   position: fixed;
   top: 0;
   left: 0;
-  display: flex;
-  /* display: none; */
+  z-index: 100;
+  /* display: flex; */
+  display: none;
   width: 100%;
   height: 100%;
   background-color: rgba(240, 240, 240, 0.9);
@@ -1986,7 +2025,6 @@ body {
   background-image: url(../images/icons/icon-close.svg);
   background-repeat: no-repeat;
   background-position: center;
-  transition: 0.3s;
   cursor: pointer;
 }
 
@@ -2025,7 +2063,6 @@ body {
   font-size: 16px;
   line-height: 20px;
   color: rgba(0, 0, 0, 1);
-  transition: 0.3s;
 }
 
 .order-form-input::placeholder {
@@ -2107,7 +2144,6 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
-  transition: 0.3s;
 }
 
 .order-tooltip-btn:hover {
@@ -2174,7 +2210,6 @@ body {
   background-color: #F0F0F0;
   cursor: pointer;
   padding: 0;
-  transition: 0.3s;
 }
 
 .order-button-plus {
@@ -2228,8 +2263,3 @@ body {
   min-width: 200px;
 }
 
-.order-form-number::-webkit-outer-spin-button,
-.order-form-number::-webkit-inner-spin-button {
-  appearance: none;
-  margin: 0;
-}
