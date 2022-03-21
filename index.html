@@ -2,7 +2,11 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Интернет-магазин Девайс</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
@@ -15,8 +19,11 @@
         <ul class="user-nav-list list-reset">
           <li class="user-nav-item user-nav-search">
             <form action="https://echo.htmlacademy.ru/" class="form-search" method="get">
-              <label class="visually-hidden" for="search">Поиск по сайту</label>
-              <input class="search" id="search" type="text" name="search" placeholder="Поиск по сайту">
+              <div class="search-wrap">
+                <label class="visually-hidden" for="search">Поиск по сайту</label>
+                <input class="search" id="search" type="text" name="search" placeholder="Текст поиска">
+                <span class="search-rect"></span>
+              </div>
               <button class="search-button" type="submit">Найти</button>
             </form>
           </li>
@@ -39,7 +46,6 @@
           <li class="user-nav-item user-nav-item-cart">
             <a class="user-nav-link user-nav-link-cart" href="#">Корзина</a>
             <div class="popover-cart">
-
                 <h2 class="visually-hidden">Корзина</h2>
                 <ul class="cart-list list-reset">
                   <li class="cart-item">
@@ -248,7 +254,7 @@
               </li>
               <li class="categories-item">
                 <a class="categories-link categories-link-monopod" href="catalog.html">
-                  <h3 class="categories-title">Моноподы
+                  <h3 class="categories-title">Моноподы<br>
                     для селфи</h3>
                 </a>
               </li>
@@ -295,7 +301,7 @@
               <li class="services-desc-item services-desc-delivery">
                 <h3 class="section-title services-desc-title">Доставка</h3>
                 <p class="services-desc-text">Мы с удовольствием доставим ваш товар прямо
-                  к вашему подъезду совершенно бесплатно! Ведь
+                  к&nbsp;вашему подъезду совершенно бесплатно! Ведь
                   мы неплохо заработаем, поднимая его на ваш этаж.</p>
               </li>
               <li class="services-desc-item services-desc-warranty">
@@ -365,7 +371,7 @@
       <section class="subscribe">
         <div class="container subscribe-inner">
           <h2 class="section-title subscribe-title">Подпишитесь<br> на рассылку</h2>
-          <p class="subscribe-text">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
+          <p class="subscribe-text">Еженедельный дайджест с обзорами новинок,<br> длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="email">Email</label>
             <input class="email" placeholder="Ваш e-mail" type="email" name="email" id="email" required>
@@ -394,7 +400,7 @@
                 <a class="btn services-link" href="#">Контакты</a>
               </li>
             </ul>
-            <a class="footer-tel" href="tel:+78128121212">+7 (812) 812-12-12</a>
+            <a class="footer-tel" href="tel:+78128121212"><span class="footer-tel-text">Тел:</span> +7 (812) 812-12-12</a>
             <div class="footer-line"></div>
             <ul class="footer-social-list list-reset">
               <li class="footer-social-item">
@@ -446,7 +452,7 @@
               </p>
               <p class="order-form-area">
                 <label class="order-form-label" for="order-email">Ваш e-mail:</label>
-                <input  class="order-form-input order-form-input-half order-form-input-email" type="email" id="order-email" name="order-email" placeholder="Введите e-mail">
+                <input  class="order-form-input order-form-input-half order-form-input-email" type="email" id="order-email" name="order-email" placeholder="Введите e-mail" required>
                 <span class="order-form-text">Забавный у вас адрес</span>
               </p>
             </div>
