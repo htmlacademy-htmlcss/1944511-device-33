@@ -1588,7 +1588,7 @@ body {
   margin-left: auto;
 }
 
-.htmlacademy-link:hover svg path {
+.htmlacademy-link:hover path {
   fill: #ffffff;
 }
 
@@ -1597,7 +1597,7 @@ body {
   outline-offset: 2px;
 }
 
-.htmlacademy-link:active svg path {
+.htmlacademy-link:active path {
   fill: rgba(255, 255, 255, 0.3);
 }
 
